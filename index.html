@@ -8,6 +8,7 @@
     <title>Game of Life</title>
   </head>
   <body class='min-h-screen max-h-screen'>
+    <img class="w-3/4 h-3/4" src="./src/public/playPause.svg" style="display:none;">
 
     <nav name="header" class="flex-row items-center">
       <div class="flex w-full max-w-7xl h-full flex-row justify-center mx-auto sm:px-6 lg:px-8 border-b border-black" style="height:calc(var(--vh) * 7.5)">
@@ -20,7 +21,7 @@
       </div>
     </nav>
     
-    <div id="settingsMenu" class="fixed z-10 bg-white flex w-full flex-col justify-start items-center mx-auto overflow-y-auto" style="height:calc(var(--vh) * 85)">
+    <div id="settingsMenu" class="fixed z-10 bg-white flex w-full flex-col justify-start items-center mx-auto overflow-y-auto" style="height:calc(var(--vh) * 92.5)">
   
       <div class="mx-auto my-4 flex flex-col justify-center items-center">
         <label for="sizeAxis" class="mx-auto my-2">Size: </label>
@@ -40,7 +41,7 @@
       
     </div>
     
-    <div id="gameContainer" class="fixed w-full" style="height:calc(var(--vh) * 85)">
+    <div id="gameContainer" class="fixed w-full flex justify-center items-center" style="height:calc(var(--vh) * 92.5)">
       <div id="gameDiv" class="mx-auto">
       </div>
     </div>

@@ -125,7 +125,7 @@ function Start()
   if(interval != null) ClearInterval();
   playPauseButton.src = "./src/public/playCircled.svg";
   let screenWidth = window.innerWidth;
-  let screenHeight = window.innerHeight * 0.9;
+  let screenHeight = window.innerHeight * 0.925;
   let squareSize;
   if(screenWidth >= screenHeight) squareSize = screenHeight;
   else squareSize = screenWidth;
@@ -151,7 +151,7 @@ function Start()
       FindIndex(counter, cell);
       cells.push(cell);
       let b = document.createElement("BUTTON");
-      b.className = "gameButton p-0 m-0 box-border float-left";
+      b.className = "gameButton";
       b.dataset.index = counter;
       b.dataset.state = "dead";
       b.style.width = buttonSize + "px";
