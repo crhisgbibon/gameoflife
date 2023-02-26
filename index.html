@@ -8,11 +8,11 @@
     <title>Game of Life</title>
   </head>
   <body class='min-h-screen max-h-screen'>
-    <img class="w-3/4 h-3/4" src="./src/public/playPause.svg" style="display:none;">
 
     <nav name="header" class="flex-row items-center">
       <div class="flex w-full max-w-7xl h-full flex-row justify-center mx-auto sm:px-6 lg:px-8 border-b border-black" style="height:calc(var(--vh) * 7.5)">
-        <button id="startButton" class="flex justify-center items-center mx-2 active:scale-95 hover:scale-105"><img class="w-3/4 h-3/4" id="playPauseButton" src="./src/public/playCircled.svg"></button>
+        <button id="startButton" class="flex justify-center items-center mx-2 active:scale-95 hover:scale-105"><img class="w-3/4 h-3/4" id="PlayButton" src="./src/public/playCircled.svg"></button>
+        <button id="pauseButton" class="flex justify-center items-center mx-2 active:scale-95 hover:scale-105"><img class="w-3/4 h-3/4" id="PauseButton" src="./src/public/playPause.svg"></button>
         <button id="stepButton" class="flex justify-center items-center mx-2 active:scale-95 hover:scale-105"><img class="w-3/4 h-3/4" src="./src/public/playNext.svg"></button>
         <button id="resetButton" class="flex justify-center items-center mx-2 active:scale-95 hover:scale-105"><img class="w-3/4 h-3/4" src="./src/public/undo.svg"></button>
         <button id="countDisplay" class="flex justify-center items-center mx-2 cursor-auto w-16"></button>

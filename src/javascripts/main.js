@@ -65,10 +65,11 @@ class Cell{
   }
 }
 
-const playPauseButton = document.getElementById("playPauseButton");
-
 const startButton = document.getElementById("startButton");
-startButton.onclick = function(){ StartInterval() };
+startButton.onclick = function(){ PlayInterval() };
+
+const pauseButton = document.getElementById("pauseButton");
+pauseButton.onclick = function(){ PauseInterval() };
 
 const stepButton = document.getElementById("stepButton");
 stepButton.onclick = function(){ Step() };
@@ -123,7 +124,6 @@ let deadGame = false;
 function Start()
 {
   if(interval != null) ClearInterval();
-  playPauseButton.src = "./src/public/playCircled.svg";
   let screenWidth = window.innerWidth;
   let screenHeight = window.innerHeight * 0.925;
   let squareSize;
@@ -172,19 +172,21 @@ function Start()
   }
 }
 
-function StartInterval()
+function PlayInterval()
 {
   if(interval === null)
   {
-    playPauseButton.src = "./src/public/playPause.svg";
     interval = setInterval(Iterate, frequency);
   }
-  else
+}
+
+function PauseInterval()
+{
+  if(interval !== null)
   {
-    playPauseButton.src = "./src/public/playCircled.svg";
     clearInterval(interval);
     interval = null;
-  };
+  }
 }
 
 function ClearInterval()
@@ -237,7 +239,6 @@ function Step()
 {
   if(interval != null)
   {
-    playPauseButton.src = "./src/public/playCircled.svg";
     ClearInterval();
   }
   Iterate();
